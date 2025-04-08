@@ -4,22 +4,29 @@ print("---CALCULATOR---")
 
 def calculator():
     while True:
-        num1=float(input("enter the first number:"))
-        num2=float(input("enter the second number:"))
-
-        print("press '1' for Addition(+)")
-        print("press '2' for Subtraction(-)")
-        print("press '3' for Multiplication(*)")
-        print("press '4' for Division(/)")
-       
-
-        operation=(input("enter your choice from 1 to 4:"))
+        print("press '1' for ADDITION")
+        print("press '2' for SUBTRACTION")
+        print("press '3' for MULTIPLICATION")
+        print("press '4' for DIVISION")
+        print("press '5' to EXIT")
+        
+        
+        operation=(input("enter your choice from 1 to 5:"))
+        
+        if operation == '5':
+            print("Exiting the contact book.thankyou for using CODSOFT CONTACTBOOK!!")
+            break
+        else:
+            num1=float(input("enter the first number:"))
+            num2=float(input("enter the second number:"))
+         
+         
+         
                
         
-        if operation not in ('1','2','3','4'):
+        if operation not in ('1','2','3','4','5'):
             print("Invalid output, please choose correct option from 1 to 4")
-            continue
-        
+           
     
     
         if operation =='1':
@@ -45,6 +52,8 @@ def calculator():
             else:
                 result=num1/num2
                 print(f"the Division  of {num1} and {num2} is {round(result,2)} ")
+                
+          
             
     
 calculator()
